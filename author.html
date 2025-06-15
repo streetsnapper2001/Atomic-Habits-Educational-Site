@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About the Author - James Clear</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about James Clear, author of Atomic Habits and expert on behavior change and continuous improvement.">
+  <style>
+    /* Base Styles */
+    :root {
+      --primary: #1e40af;
+      --secondary: #1e3a8a;
+      --accent: #3b82f6;
+      --light: #f8fafc;
+      --dark: #1e293b;
+      --text: #334155;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f1f5f9;
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes scaleIn {
+      from {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      padding: 50px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      animation: scaleIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    
+    /* Typography */
+    h2 {
+      color: var(--secondary);
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 10px;
+      opacity: 0;
+      animation: slideUp 0.8s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 70px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeIn 0.8s forwards;
+    }
+    
+    p:nth-child(1) { animation-delay: 0.4s; }
+    p:nth-child(2) { animation-delay: 0.6s; }
+    
+    strong {
+      color: var(--secondary);
+    }
+    
+    em {
+      font-style: italic;
+      color: var(--primary);
+    }
+    
+    /* Author Photos */
+    .author-photos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin: 40px 0;
+      justify-content: center;
+    }
+    
+    .author-photos img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+      opacity: 0;
+      animation: slideUp 0.8s forwards;
+    }
+    
+    .author-photos img:nth-child(1) { animation-delay: 0.8s; }
+    .author-photos img:nth-child(2) { animation-delay: 1.0s; }
+    .author-photos img:nth-child(3) { animation-delay: 1.2s; }
+    
+    .author-photos img:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      z-index: 1;
+    }
+    
+    /* Back Link */
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(30, 64, 175, 0.2);
+      opacity: 0;
+      animation: fadeIn 0.8s forwards;
+      animation-delay: 1.4s;
+    }
+    
+    .back-link:hover {
+      background-color: var(--secondary);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(30, 64, 175, 0.3);
+    }
+    
+    .back-link:active {
+      transform: translateY(0);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 20px;
+        margin: 20px 10px;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      .author-photos {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .author-photos img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>About the Author</h2>
+    <p><strong>James Clear</strong> is a bestselling author and internationally renowned speaker best known for his book, <em>Atomic Habits</em>. He specializes in the topics of behavior change, decision-making, and continuous improvement. His writing draws from scientific research and practical insights, helping millions of readers worldwide build better habits and systems for long-term success.</p>
+    <p>James Clear's work has influenced leaders in business, sports, and healthcare. He is a regular speaker at Fortune 500 companies, and his ideas have been featured in Time magazine, The New York Times, and on CBS This Morning. His newsletter reaches over a million subscribers weekly, and his philosophy centers on the belief that small changes lead to big results.</p>
+    
+    <div class="author-photos"><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>James Clear - Author, Speaker, Behavior Change Expert</title>
+  <meta name="description" content="Discover James Clear, the bestselling author of Atomic Habits and world-renowned expert on behavior change, decision-making, and continuous improvement.">
+  <meta name="keywords" content="James Clear, Atomic Habits, behavior change, habit formation, productivity, personal development">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #1e40af;
+      --secondary: #1e3a8a;
+      --accent: #3b82f6;
+      --accent-light: #60a5fa;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --light: #f8fafc;
+      --light-blue: #eff6ff;
+      --dark: #1e293b;
+      --text: #334155;
+      --text-light: #64748b;
+      --border: #e2e8f0;
+      --white: #ffffff;
+      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+      --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-heavy: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    .hero-section {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+      animation: float 30s infinite linear;
+    }
+
+    @keyframes float {
+      0% { transform: translateX(0) translateY(0); }
+      100% { transform: translateX(-20px) translateY(-20px); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #fff, #e0e7ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 700;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      text-align: center;
+      color: var(--text-light);
+      margin-bottom: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+      align-items: start;
+      margin-bottom: 80px;
+    }
+
+    .bio-image-section {
+      position: sticky;
+      top: 100px;
+    }
+
+    .main-portrait {
+      width: 100%;
+      max-width: 400px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: var(--shadow-heavy);
+      transition: transform 0.3s ease;
+    }
+
+    .main-portrait:hover {
+      transform: scale(1.02);
+    }
+
+    .bio-content {
+      background: var(--white);
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-medium);
+    }
+
+    .bio-text {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: var(--text);
+    }
+
+    .bio-text:first-child {
+      font-size: 1.3rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .achievements-section {
+      background: var(--white);
+      padding: 80px 0;
+    }
+
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .achievement-card {
+      background: var(--light-blue);
+      padding: 40px 30px;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid #bfdbfe;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .achievement-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-heavy);
+    }
+
+    .achievement-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .achievement-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .achievement-desc {
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .book-section {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 80px 0;
+    }
+
+    .book-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .book-cover {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .book-cover:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    .book-info h3 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .book-subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    .book-description {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    .book-stats {
+      display: flex;
+      gap: 30px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .book-stat {
+      text-align: center;
+    }
+
+    .book-stat-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      display: block;
+    }
+
+    .book-stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .quotes-section {
+      padding: 80px 0;
+      background: var(--light);
+    }
+
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .quote-card {
+      background: var(--white);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-light);
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .quote-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-medium);
+    }
+
+    .quote-card::before {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      left: 30px;
+      font-size: 6rem;
+      color: var(--accent);
+      opacity: 0.2;
+      font-family: serif;
+    }
+
+    .quote-text {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 20px;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+
+    .quote-author {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    .philosophy-section {
+      background: var(--white);
+      padding: 80px 0;
+    }
+
+    .philosophy-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+      margin-top: 60px;
+    }
+
+    .philosophy-card {
+      text-align: center;
+      padding: 40px 30px;
+    }
+
+    .philosophy-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 30px;
+      font-size: 2rem;
+      color: white;
+    }
+
+    .philosophy-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .philosophy-text {
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    .media-section {
+      background: var(--light);
+      padding: 80px 0;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .media-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: var(--shadow-light);
+      transition: all 0.3s ease;
+    }
+
+    .media-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-medium);
+    }
+
+    .media-logo {
+      height: 40px;
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+
+    .media-text {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    .timeline-section {
+      background: var(--white);
+      padding: 80px 0;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 60px auto 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--accent);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+      display: flex;
+      align-items: center;
+    }
+
+    .timeline-item:nth-child(odd) {
+      justify-content: flex-end;
+    }
+
+    .timeline-item:nth-child(even) {
+      justify-content: flex-start;
+    }
+
+    .timeline-content {
+      background: var(--light-blue);
+      padding: 30px;
+      border-radius: 15px;
+      width: 45%;
+      border: 1px solid #bfdbfe;
+      position: relative;
+    }
+
+    .timeline-year {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .timeline-event {
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: var(--accent);
+      border: 4px solid var(--white);
+      border-radius: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .cta-section {
+      background: var(--dark);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .cta-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .cta-text {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .cta-button.primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .cta-button.secondary {
+      background: transparent;
+      color: white;
+      border-color: white;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-link {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: var(--white);
+      color: var(--primary);
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: var(--shadow-medium);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .back-link:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-heavy);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .bio-grid,
+      .book-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .bio-image-section {
+        position: static;
+        text-align: center;
+      }
+
+      .timeline::before {
+        left: 30px;
+      }
+
+      .timeline-item {
+        justify-content: flex-start !important;
+      }
+
+      .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px;
+      }
+
+      .timeline-dot {
+        left: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-stats {
+        gap: 20px;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .bio-content {
+        padding: 30px;
+      }
+
+      .achievements-grid,
+      .quotes-grid,
+      .philosophy-content,
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .back-link {
+        position: static;
+        display: inline-block;
+        margin: 20px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to Home</a>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">James Clear</h1>
+      <p class="hero-subtitle">Bestselling Author • Speaker • Behavior Change Expert</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">15M+</span>
+          <span class="stat-label">Books Sold</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">1M+</span>
+          <span class="stat-label">Newsletter Subscribers</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Languages</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">5M+</span>
+          <span class="stat-label">Website Visitors</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="bio-grid">
+        <div class="bio-image-section">
+          <img src="Author - 1.jpeg" alt="James Clear" class="main-portrait">
+        </div>
+        <div class="bio-content fade-in">
+          <p class="bio-text">James Clear is one of the world's leading experts on habit formation and behavioral psychology.</p>
+          <p class="bio-text">His bestselling book <strong>Atomic Habits</strong> has sold over 15 million copies worldwide and has been translated into more than 50 languages. The book has spent over 200 weeks on the New York Times bestseller list and continues to help millions of people build better habits and break bad ones.</p>
+          <p class="bio-text">Clear's work focuses on the intersection of psychology, neuroscience, and human performance. He believes that small changes compound into remarkable results, and his evidence-based approach has helped individuals, teams, and organizations improve their performance.</p>
+          <p class="bio-text">Before becoming a full-time writer and speaker, Clear was a successful entrepreneur who grew his blog from zero to 500,000+ email subscribers. His insights on productivity, habits, and decision-making are sought after by Fortune 500 companies, professional sports teams, and educational institutions worldwide.</p>
+          <p class="bio-text">He regularly speaks at conferences and corporate events, sharing practical strategies for building better systems and achieving long-term success through small, consistent improvements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="achievements-section">
+    <div class="container">
+      <h2 class="section-title">Key Achievements</h2>
+      <p class="section-subtitle">Recognition and impact across multiple industries and platforms</p>
+      <div class="achievements-grid">
+        <div class="achievement-card fade-in">
+          <span class="achievement-icon">🏆</span>
+          <h3 class="achievement-title">New York Times Bestseller</h3>
+          <p class="achievement-desc">Atomic Habits spent over 200 weeks on the NYT bestseller list, establishing itself as one of the most influential self-help books of the decade.</p>
+        </div>
+        <div class="achievement-card fade-in">
+          <span class="achievement-icon">🎯</span>
+          <h3 class="achievement-title">Fortune 500 Speaker</h3>
+          <p class="achievement-desc">Regular keynote speaker for major corporations including Google, Microsoft, and General Electric, helping teams optimize performance through better habits.</p>
+        </div>
+        <div class="achievement-card fade-in">
+          <span class="achievement-icon">📚</span>
+          <h3 class="achievement-title">Multi-Language Impact</h3>
+          <p class="achievement-desc">His work has been translated into over 50 languages, making behavior change accessible to millions of readers worldwide.</p>
+        </div>
+        <div class="achievement-card fade-in">
+          <span class="achievement-icon">🎙️</span>
+          <h3 class="achievement-title">Media Recognition</h3>
+          <p class="achievement-desc">Featured in Time magazine, The New York Times, CBS This Morning, and hundreds of podcasts and publications globally.</p>
+        </div>
+        <div class="achievement-card fade-in">
+          <span class="achievement-icon">📊</span>
+          <h3 class="achievement-title">Digital Influence</h3>
+          <p class="achievement-desc">Over 1 million newsletter subscribers and 5+ million monthly website visitors, building one of the largest audiences in personal development.</p>
+        </div>
+        <div class="achievement-card fade-in">
+          <span class="achievement-icon">🏅</span>
+          <h3 class="achievement-title">Sports Consulting</h3>
+          <p class="achievement-desc">Worked with professional athletes and sports teams to optimize training habits and mental performance strategies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+        </div>
+        <div class="book-info">
+          <h3>Atomic Habits</h3>
+          <p class="book-subtitle">An Easy & Proven Way to Build Good Habits & Break Bad Ones</p>
+          <p class="book-description">A revolutionary approach to habit formation that focuses on small changes that compound into remarkable results. The book provides a practical framework for improving every area of your life through the power of atomic habits.</p>
+          <p class="book-description">Clear combines scientific research with real-world examples to show how tiny changes in behavior can lead to extraordinary outcomes. The book introduces the Four Laws of Behavior Change and provides actionable strategies for implementation.</p>
+          <div class="book-stats">
+            <div class="book-stat">
+              <span class="book-stat-number">15M+</span>
+              <span class="book-stat-label">Copies Sold</span>
+            </div>
+            <div class="book-stat">
+              <span class="book-stat-number">50+</span>
+              <span class="book-stat-label">Languages</span>
+            </div>
+            <div class="book-stat">
+              <span class="book-stat-number">200+</span>
+              <span class="book-stat-label">Weeks on NYT List</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quotes-section">
+    <div class="container">
+      <h2 class="section-title">Key Insights</h2>
+      <p class="section-subtitle">Powerful quotes that capture James Clear's philosophy on habits and success</p>
+      <div class="quotes-grid">
+        <div class="quote-card fade-in">
+          <p class="quote-text">Success is the product of daily habits—not once-in-a-lifetime transformations.</p>
+          <p class="quote-author">— James Clear</p>
+        </div>
+        <div class="quote-card fade-in">
+          <p class="quote-text">You do not rise to the level of your goals. You fall to the level of your systems.</p>
+          <p class="quote-author">— James Clear</p>
+        </div>
+        <div class="quote-card fade-in">
+          <p class="quote-text">Every action you take is a vote for the type of person you wish to become.</p>
+          <p class="quote-author">— James Clear</p>
+        </div>
+        <div class="quote-card fade-in">
+          <p class="quote-text">If you want better results, then forget about setting goals. Focus on your system instead.</p>
+          <p class="quote-author">— James Clear</p>
+        </div>
+        <div class="quote-card fade-in">
+          <p class="quote-text">Habits are the compound interest of self-improvement.</p>
+          <p class="quote-author">— James Clear</p>
+        </div>
+        <div class="quote-card fade-in">
+          <p class="quote-text">The most effective way to change your habits is to focus not on what you want to achieve, but on who you wish to become.</p>
+          <p class="quote-author">— James Clear</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="philosophy-section">
+    <div class="container">
+      <h2 class="section-title">Core Philosophy</h2>
+      <p class="section-subtitle">The fundamental principles that guide James Clear's approach to behavior change</p>
+      <div class="philosophy-content">
+        <div class="philosophy-card fade-in">
+          <div class="philosophy-icon">🔄</div>
+          <h3 class="philosophy-title">Systems Over Goals</h3>
+          <p class="philosophy-text">Focus on the process rather than the outcome. Goals are about the results you want to achieve, but systems are about the processes that lead to those results.</p>
+        </div>
+        <div class="philosophy-card fade-in">
+          <div class="philosophy-icon">🧬</div>
+          <h3 class="philosophy-title">Atomic Improvements</h3>
+          <p class="philosophy-text">Small changes compound into remarkable results. Getting 1% better every day leads to being 37 times better after one year through compound growth.</p>
+        </div>
+        <div class="philosophy-card fade-in">
+          <div class="philosophy-icon">🎭</div>
+          <h3 class="philosophy-title">Identity-Based Habits</h3>
+          <p class="philosophy-text">True behavior change is identity change. Every action you take is a vote for the type of person you wish to become.</p>
+        </div>
+        <div class="philosophy-card fade-in">
+          <div class="philosophy-icon">🏗️</div>
+          <h3 class="philosophy-title">Environment Design</h3>
+          <p class="philosophy-text">Make the environment work for you. Design your surroundings to make good habits easier and bad habits harder.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline-section">
+    <div class="container">
+      <h2 class="section-title">Career Timeline</h2>
+      <p class="section-subtitle">Key milestones in James Clear's journey to becoming a leading voice in behavior change</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-year">2012</div>
+            <div class="timeline-event">Started JamesClear.com blog, sharing insights on productivity and habit formation</div>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-year">2014</div>
+            <div class="timeline-event">Reached 100,000 email subscribers, establishing himself as a thought leader in personal development</div>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-year">2016</div>
+            <div class="timeline-event">Began speaking at Fortune 500 companies and major conferences worldwide</div>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-year">2018</div>
+            <div class="timeline-event">Published "Atomic Habits," which became an instant bestseller
+      <img src="Author - 1.jpeg" alt="James Clear speaking at an event">
+      <img src="Author - 2.jpeg" alt="James Clear portrait">
+      <img src="Author - 3.jpg" alt="James Clear writing">
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
+</body>
+</html>

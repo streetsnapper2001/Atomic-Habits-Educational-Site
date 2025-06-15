@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Four Laws of Behavior Change - Complete Guide</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #1e40af;
+      --accent-color: #3b82f6;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+      --background-light: #f8fafc;
+      --background-white: #ffffff;
+      --border-color: #e5e7eb;
+      --success-color: #10b981;
+      --warning-color: #f59e0b;
+      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-heavy: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--background-light);
+      scroll-behavior: smooth;
+    }
+
+    .hero-section {
+      background: var(--gradient-primary);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.15"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.15"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      animation: float 20s infinite linear;
+    }
+
+    @keyframes float {
+      0% { transform: translateX(0) translateY(0); }
+      100% { transform: translateX(-100px) translateY(-100px); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #fff, #e0e7ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      text-align: center;
+      color: var(--text-secondary);
+      margin-bottom: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .laws-grid {
+      display: grid;
+      gap: 60px;
+      margin-bottom: 80px;
+    }
+
+    .law-card {
+      background: var(--background-white);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow-medium);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .law-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-heavy);
+    }
+
+    .law-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+    }
+
+    .law-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .law-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 15px;
+      background: var(--gradient-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .law-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .law-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .law-text {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .law-examples {
+      background: var(--background-light);
+      padding: 25px;
+      border-radius: 15px;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    .examples-title {
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .example-list {
+      list-style: none;
+    }
+
+    .example-list li {
+      padding: 8px 0;
+      position: relative;
+      padding-left: 25px;
+      color: var(--text-secondary);
+    }
+
+    .example-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success-color);
+      font-weight: bold;
+    }
+
+    .science-section {
+      background: var(--background-white);
+      border-radius: 20px;
+      padding: 50px;
+      margin: 60px 0;
+      box-shadow: var(--shadow-medium);
+    }
+
+    .science-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-align: center;
+      color: var(--text-primary);
+    }
+
+    .science-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .science-fact {
+      padding: 30px;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border-radius: 15px;
+      border: 1px solid #bae6fd;
+    }
+
+    .fact-title {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .fact-text {
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .tips-section {
+      background: var(--gradient-secondary);
+      color: white;
+      border-radius: 20px;
+      padding: 60px 40px;
+      margin: 60px 0;
+      text-align: center;
+    }
+
+    .tips-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .tip-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .tip-icon {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .tip-title {
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .tip-text {
+      opacity: 0.9;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .quote-section {
+      text-align: center;
+      padding: 80px 40px;
+      background: var(--background-white);
+      border-radius: 20px;
+      margin: 60px 0;
+      box-shadow: var(--shadow-light);
+    }
+
+    .quote-text {
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .quote-author {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .cta-section {
+      background: var(--text-primary);
+      color: white;
+      text-align: center;
+      padding: 80px 40px;
+      border-radius: 20px;
+      margin: 60px 0;
+    }
+
+    .cta-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .cta-text {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--accent-color);
+      color: white;
+      padding: 15px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .cta-button:hover {
+      background: var(--primary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border-color);
+      background: var(--background-white);
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      color: var(--primary-color);
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-stats {
+        gap: 20px;
+      }
+      
+      .law-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .science-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .tips-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero-section {
+        padding: 60px 20px;
+      }
+      
+      .section {
+        padding: 60px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .law-card,
+      .science-section,
+      .tips-section,
+      .quote-section,
+      .cta-section {
+        padding: 30px 20px;
+        margin: 40px 0;
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .law-card:nth-child(1) { animation-delay: 0.1s; }
+    .law-card:nth-child(2) { animation-delay: 0.2s; }
+    .law-card:nth-child(3) { animation-delay: 0.3s; }
+    .law-card:nth-child(4) { animation-delay: 0.4s; }
+  </style>
+</head>
+<body>
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">🌱 The Four Laws of Behavior Change</h1>
+      <p class="hero-subtitle">Master the science-backed framework for building lasting habits and transforming your life</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Proven Laws</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">66</span>
+          <span class="stat-label">Days to Form a Habit</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">1%</span>
+          <span class="stat-label">Daily Improvement</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">The Complete Framework</h2>
+      <p class="section-subtitle">Based on James Clear's groundbreaking research in "Atomic Habits," these four laws create a systematic approach to habit formation that works with your brain's natural patterns.</p>
+      
+      <div class="laws-grid">
+        <div class="law-card fade-in">
+          <div class="law-header">
+            <div class="law-icon">🔍</div>
+            <h3 class="law-title">1. Make it Obvious</h3>
+          </div>
+          <div class="law-content">
+            <div class="law-text">
+              <p><strong>The Foundation of Awareness:</strong> Your brain operates on autopilot 95% of the time. To build new habits, you must first make the desired behavior impossible to ignore.</p>
+              
+              <p>This law leverages your environment as a silent architect of your behavior. When cues are obvious, your brain doesn't need to work hard to remember what to do next.</p>
+              
+              <p><strong>The Science:</strong> Neuroscientists have discovered that habit formation begins in the basal ganglia, a region that doesn't require conscious thought. By making cues obvious, you're essentially programming this automatic system.</p>
+            </div>
+            <div class="law-examples">
+              <h4 class="examples-title">Implementation Strategies:</h4>
+              <ul class="example-list">
+                <li>Place your gym clothes next to your bed</li>
+                <li>Keep a water bottle on your desk at all times</li>
+                <li>Put your book on your pillow to read before sleep</li>
+                <li>Set visual reminders in high-traffic areas</li>
+                <li>Use implementation intentions: "When I do X, I will do Y"</li>
+                <li>Stack new habits onto existing routines</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="law-card fade-in">
+          <div class="law-header">
+            <div class="law-icon">🎯</div>
+            <h3 class="law-title">2. Make it Attractive</h3>
+          </div>
+          <div class="law-content">
+            <div class="law-text">
+              <p><strong>Dopamine-Driven Motivation:</strong> Your brain releases dopamine not just when you experience pleasure, but when you anticipate it. Making habits attractive hijacks this anticipation system.</p>
+              
+              <p>Temptation bundling is the cornerstone strategy here—pairing something you need to do with something you want to do creates a powerful motivational cocktail.</p>
+              
+              <p><strong>The Science:</strong> Research shows that dopamine peaks during anticipation, not reward. By making the process attractive, you're essentially pre-loading motivation into your habit loop.</p>
+            </div>
+            <div class="law-examples">
+              <h4 class="examples-title">Attraction Techniques:</h4>
+              <ul class="example-list">
+                <li>Listen to podcasts only while exercising</li>
+                <li>Watch Netflix only while doing household chores</li>
+                <li>Join a community of people with similar goals</li>
+                <li>Reframe your mindset: "I get to" vs "I have to"</li>
+                <li>Create a motivating environment with music or lighting</li>
+                <li>Reward yourself immediately after completion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="law-card fade-in">
+          <div class="law-header">
+            <div class="law-icon">⚡</div>
+            <h3 class="law-title">3. Make it Easy</h3>
+          </div>
+          <div class="law-content">
+            <div class="law-text">
+              <p><strong>The Path of Least Resistance:</strong> Human behavior follows the Law of Least Effort. When a habit requires significant energy or time, your brain will naturally resist it.</p>
+              
+              <p>The 2-Minute Rule is revolutionary: scale down your habits until they can be done in two minutes or less. This removes the activation energy barrier that prevents most habits from taking root.</p>
+              
+              <p><strong>The Science:</strong> Studies show that reducing friction by just 20 seconds can dramatically increase habit adherence. Your prefrontal cortex, responsible for willpower, has limited capacity—conserve it by making good habits effortless.</p>
+            </div>
+            <div class="law-examples">
+              <h4 class="examples-title">Simplification Methods:</h4>
+              <ul class="example-list">
+                <li>"Read before bed" becomes "Read one page"</li>
+                <li>"Exercise daily" becomes "Put on workout clothes"</li>
+                <li>Prepare everything the night before</li>
+                <li>Use technology to automate repetitive tasks</li>
+                <li>Remove steps between you and good habits</li>
+                <li>Create "commitment devices" to maintain consistency</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="law-card fade-in">
+          <div class="law-header">
+            <div class="law-icon">🎉</div>
+            <h3 class="law-title">4. Make it Satisfying</h3>
+          </div>
+          <div class="law-content">
+            <div class="law-text">
+              <p><strong>Immediate Gratification Meets Long-term Goals:</strong> Your brain is wired to prioritize immediate rewards over future benefits. The key is creating immediate satisfaction from behaviors that benefit your future self.</p>
+              
+              <p>This law addresses the fundamental mismatch between what's good for you long-term and what feels good right now. By adding immediate rewards, you bridge this gap.</p>
+              
+              <p><strong>The Science:</strong> The brain's reward circuits are designed for immediate feedback. Habits that feel good in the moment are more likely to be repeated, creating positive reinforcement loops that strengthen neural pathways.</p>
+            </div>
+            <div class="law-examples">
+              <h4 class="examples-title">Satisfaction Strategies:</h4>
+              <ul class="example-list">
+                <li>Track habits visually with checkmarks or apps</li>
+                <li>Celebrate small wins immediately after completion</li>
+                <li>Create a "habit bank account" for milestone rewards</li>
+                <li>Share your progress with accountability partners</li>
+                <li>Use positive self-talk and affirmations</li>
+                <li>Focus on the feeling of accomplishment, not perfection</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="science-section">
+    <div class="container">
+      <h2 class="science-title">🧠 The Science Behind Habit Formation</h2>
+      <div class="science-content">
+        <div class="science-fact">
+          <h3 class="fact-title">Neuroplasticity & Habits</h3>
+          <p class="fact-text">Your brain physically changes when you form new habits. Repeated behaviors strengthen neural pathways through a process called myelination, making the behavior more automatic over time.</p>
+        </div>
+        <div class="science-fact">
+          <h3 class="fact-title">The Habit Loop</h3>
+          <p class="fact-text">MIT researchers discovered that habits operate in a three-step loop: Cue → Routine → Reward. Understanding this loop allows you to engineer lasting behavioral change.</p>
+        </div>
+        <div class="science-fact">
+          <h3 class="fact-title">The 1% Rule</h3>
+          <p class="fact-text">Improving by just 1% daily compounds to make you 37 times better over a year. Small, consistent changes create remarkable long-term results through the power of compound growth.</p>
+        </div>
+        <div class="science-fact">
+          <h3 class="fact-title">Environment Design</h3>
+          <p class="fact-text">Studies show that 45% of our daily actions are habits triggered by environmental cues. Designing your environment is one of the most powerful tools for behavior change.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tips-section">
+    <div class="container">
+      <h2 class="tips-title">🚀 Pro Implementation Tips</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <span class="tip-icon">🎯</span>
+          <h3 class="tip-title">Start Ridiculously Small</h3>
+          <p class="tip-text">Your goal is to establish the behavior, not achieve perfection. One push-up is better than planning for 50 and doing none.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">📊</span>
+          <h3 class="tip-title">Track Leading Indicators</h3>
+          <p class="tip-text">Don't just track outcomes—track the behaviors that lead to outcomes. Focus on inputs, not just outputs.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">🔄</span>
+          <h3 class="tip-title">Use Habit Stacking</h3>
+          <p class="tip-text">Attach new habits to existing ones. "After I pour my morning coffee, I will write one sentence in my journal."</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">🎪</span>
+          <h3 class="tip-title">Design Your Environment</h3>
+          <p class="tip-text">Make good habits inevitable and bad habits impossible. Your willpower is limited—your environment is not.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">👥</span>
+          <h3 class="tip-title">Find Your Tribe</h3>
+          <p class="tip-text">Join communities where your desired behavior is normal. Social proof is one of the most powerful motivators.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">⏰</span>
+          <h3 class="tip-title">Focus on Systems</h3>
+          <p class="tip-text">Goals are about the results you want; systems are about the processes that lead to those results. Fall in love with the process.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <div class="container">
+      <blockquote class="quote-text">
+        "Success is the product of daily habits—not once-in-a-lifetime transformations. You do not rise to the level of your goals. You fall to the level of your systems."
+      </blockquote>
+      <cite class="quote-author">— James Clear, Atomic Habits</cite>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Ready to Transform Your Life?</h2>
+      <p class="cta-text">The best time to plant a tree was 20 years ago. The second best time is now. Start building the habits that will create the life you want, one small step at a time.</p>
+      <button class="cta-button" onclick="alert('Start your habit transformation journey today!')">Start Your Journey Today</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p><span class="footer-brand">Sana Strategy</span> | Mindset Coaching</p>
+      <p style="margin-top: 10px; font-size: 0.9rem;">Empowering transformation through science-backed habit formation</p>
+    </div>
+  </footer>
+
+  <script>
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all fade-in elements
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth scrolling for better UX
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
