@@ -50,7 +50,7 @@
 
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.02); }
             100% { transform: scale(1); }
         }
 
@@ -146,11 +146,6 @@
             box-shadow: 0 6px 12px rgba(37, 99, 235, 0.4);
         }
 
-        .cta-nav a.active {
-            background-color: var(--primary-color);
-            animation: pulse 2s infinite;
-        }
-
         .cta-nav a:active {
             transform: translateY(0);
         }
@@ -242,25 +237,6 @@
             color: var(--accent-color);
         }
 
-        /* Loading indicator */
-        .loader {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: #e2e8f0;
-            z-index: 1000;
-        }
-
-        .loader-bar {
-            height: 100%;
-            width: 0;
-            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
-            transition: width 0.3s ease;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             header {
@@ -299,11 +275,6 @@
     </style>
 </head>
 <body>
-    <!-- Loading indicator -->
-    <div class="loader">
-        <div class="loader-bar"></div>
-    </div>
-
     <header>
         <div class="logo">
             <img src="https://m.media-amazon.com/images/I/91bYsX41DVL.jpg" alt="Atomic Habits Logo">
@@ -313,12 +284,11 @@
     </header>
 
     <nav class="cta-nav">
-        <a href="index.html">Home</a>
         <a href="about.html">About the Book</a>
         <a href="author.html">About the Author</a>
         <a href="laws.html">The Four Laws</a>
         <a href="key takeways.html">Key Takeaways</a>
-        <a href="conclusion.html" class="active">Conclusion</a>
+        <a href="conclusion.html" >conclusion</a>
     </nav>
 
     <div class="container">
@@ -334,56 +304,5 @@
         <p>&copy; 2025 Atomic Habits Project. All rights reserved.</p>
         <p>Site developed and maintained by <strong>Anamitra</strong>. Unauthorized duplication is prohibited.</p>
     </footer>
-
-    <script>
-        // Enhanced navigation handling
-        document.addEventListener('DOMContentLoaded', function() {
-            // Highlight current page in navigation
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            document.querySelectorAll('.cta-nav a').forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                }
-            });
-
-            // Smooth page transitions
-            document.querySelectorAll('.cta-nav a').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    if (this.getAttribute('href').endsWith('.html')) {
-                        e.preventDefault();
-                        const loader = document.querySelector('.loader');
-                        const loaderBar = document.querySelector('.loader-bar');
-                        
-                        // Show loading indicator
-                        loader.style.display = 'block';
-                        loaderBar.style.width = '70%';
-                        
-                        // Simulate loading (replace with actual page load)
-                        setTimeout(() => {
-                            loaderBar.style.width = '100%';
-                            setTimeout(() => {
-                                window.location.href = this.getAttribute('href');
-                            }, 300);
-                        }, 500);
-                    }
-                });
-            });
-
-            // Error handling for missing pages
-            window.addEventListener('error', function(e) {
-                if (e.target.tagName === 'A') {
-                    alert('The requested page is currently unavailable. Please try again later.');
-                    document.querySelector('.loader').style.display = 'none';
-                }
-            }, true);
-        });
-
-        // Fallback for browsers that don't support Promise
-        if (!window.Promise) {
-            const script = document.createElement('script');
-            script.src = 'https://cdn.jsdelivr.net/npm/es6-promise@4.2.8/dist/es6-promise.auto.min.js';
-            document.head.appendChild(script);
-        }
-    </script>
 </body>
 </html>
