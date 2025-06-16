@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomic Habits - Key Takeaways</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #2563eb;
+            --accent: #3b82f6;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --text: #334155;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 50%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            animation: float 20s linear infinite;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        main {
+            padding: 60px 0;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .grid-4 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .card-content {
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .card-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .card-content li {
+            margin: 8px 0;
+        }
+
+        .formula {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .formula-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .formula-equation {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: var(--dark);
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+        }
+
+        .law-item {
+            background: white;
+            border-left: 5px solid var(--primary);
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .law-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .law-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .law-number {
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 20px;
+        }
+
+        .law-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .law-content {
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .law-content strong {
+            color: var(--primary);
+            display: block;
+            margin: 15px 0 8px 0;
+        }
+
+        .quote {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 50px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 50px 0;
+            position: relative;
+        }
+
+        .quote::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            opacity: 0.3;
+        }
+
+        .quote-text {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quote-author {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border: 2px solid var(--warning);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .highlight-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+            border: 2px solid var(--success);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .key-points {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            margin: 40px 0;
+        }
+
+        .key-points h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .point-item {
+            padding: 20px;
+            background: var(--light);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .point-number {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .strategy-card {
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .identity-section {
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin: 50px 0;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            margin-top: 80px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .stats { gap: 20px; }
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+            .section-title { font-size: 2rem; }
+            .formula { padding: 30px 20px; }
+            .quote { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Atomic Habits</h1>
+            <p class="subtitle">Key Takeaways & Visual Summary</p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">1%</span>
+                    <span class="stat-label">Better Daily</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">365</span>
+                    <span class="stat-label">Days of Growth</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">37.78x</span>
+                    <span class="stat-label">Final Result</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Core Principles -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Core Principles</h2>
+                <p class="section-description">The fundamental ideas that make atomic habits so powerful</p>
+            </div>
+
+            <div class="formula">
+                <div class="formula-title">The Compound Effect Formula</div>
+                <div class="formula-equation">1% Better Daily × 365 Days = 37.78× Improvement</div>
+                <p>Small improvements compound over time. If you can get just 1% better each day, you'll end up 37 times better after a year.</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3 class="card-title">Systems vs Goals</h3>
+                    <div class="card-content">
+                        Goals are about results you want to achieve. Systems are about processes that lead to those results. Focus on systems because winners and losers often have the same goals—the difference is in their systems.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h3 class="card-title">The Habit Loop</h3>
+                    <div class="card-content">
+                        Every habit follows this pattern:<br>
+                        <strong>Cue → Craving → Response → Reward</strong><br>
+                        Understanding this loop helps you build good habits and break bad ones by manipulating each stage.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3 class="card-title">Plateau of Latent Potential</h3>
+                    <div class="card-content">
+                        Habits often seem to make no difference until you cross a critical threshold. Progress isn't linear—the most powerful outcomes are delayed, making persistence crucial.
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote">
+                <div class="quote-text">You do not rise to the level of your goals. You fall to the level of your systems.</div>
+                <div class="quote-author">— James Clear</div>
+            </div>
+        </section>
+
+        <!-- The 4 Laws -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">The 4 Laws of Behavior Change</h2>
+                <p class="section-description">A simple framework for creating good habits and breaking bad ones</p>
+            </div>
+
+            <div class="law-item">
+                <div class="law-header">
+                    <div class="law-number">1</div>
+                    <div class="law-title">Make It Obvious</div>
+                </div>
+                <div class="law-content">
+                    <strong>For Good Habits:</strong>
+                    <ul>
+                        <li>Use implementation intentions: "I will [BEHAVIOR] at [TIME] in [LOCATION]"</li>
+                        <li>Use habit stacking: "After I [CURRENT HABIT], I will [NEW HABIT]"</li>
+                        <li>Design your environment to make cues visible and obvious</li>
+                        <li>Keep important items in plain sight</li>
+                    </ul>
+                    <strong>For Bad Habits:</strong>
+                    Remove cues from your environment. Make them invisible by hiding triggers and removing temptations.
+                </div>
+            </div>
+
+            <div class="law-item">
+                <div class="law-header">
+                    <div class="law-number">2</div>
+                    <div class="law-title">Make It Attractive</div>
+                </div>
+                <div class="law-content">
+                    <strong>For Good Habits:</strong>
+                    <ul>
+                        <li>Use temptation bundling: pair actions you want to do with actions you need to do</li>
+                        <li>Join a culture where your desired behavior is normal</li>
+                        <li>Create a motivation ritual before difficult habits</li>
+                        <li>Surround yourself with people who have the habits you want</li>
+                    </ul>
+                    <strong>For Bad Habits:</strong>
+                    Make them unattractive by highlighting the negative consequences and focusing on the benefits of avoiding them.
+                </div>
+            </div>
+
+            <div class="law-item">
+                <div class="law-header">
+                    <div class="law-number">3</div>
+                    <div class="law-title">Make It Easy</div>
+                </div>
+                <div class="law-content">
+                    <strong>For Good Habits:</strong>
+                    <ul>
+                        <li>Reduce friction: decrease steps between you and good habits</li>
+                        <li>Prime your environment: prepare your space for success</li>
+                        <li>Use the 2-minute rule: scale down until it takes less than 2 minutes</li>
+                        <li>Master the decisive moment that determines your next few hours</li>
+                    </ul>
+                    <strong>For Bad Habits:</strong>
+                    Increase friction by creating obstacles and barriers. Make bad habits require more effort to execute.
+                </div>
+            </div>
+
+            <div class="law-item">
+                <div class="law-header">
+                    <div class="law-number">4</div>
+                    <div class="law-title">Make It Satisfying</div>
+                </div>
+                <div class="law-content">
+                    <strong>For Good Habits:</strong>
+                    <ul>
+                        <li>Give yourself immediate rewards when completing habits</li>
+                        <li>Use habit tracking to visualize your progress</li>
+                        <li>Celebrate small wins to reinforce positive behavior</li>
+                        <li>Make the ending of your habit satisfying</li>
+                    </ul>
+                    <strong>For Bad Habits:</strong>
+                    Make them unsatisfying by creating immediate consequences or highlighting the negative outcomes.
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Strategies -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Proven Strategies</h2>
+                <p class="section-description">Advanced techniques to optimize your habit formation</p>
+            </div>
+
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <h3 class="card-title">⏰ The 2-Minute Rule</h3>
+                    <div class="card-content">
+                        When starting a new habit, scale it down until it takes less than 2 minutes to complete. Master showing up first, then improve.
+                        <br><br>
+                        <strong>Examples:</strong><br>
+                        • "Read 30 pages" → "Read 1 page"<br>
+                        • "Do yoga for 30 minutes" → "Take out yoga mat"<br>
+                        • "Study for class" → "Open my notes"
+                    </div>
+                </div>
+
+                <div class="strategy-card">
+                    <h3 class="card-title">🔗 Habit Stacking</h3>
+                    <div class="card-content">
+                        Link your new habit to a current habit using this formula:
+                        <br><br>
+                        <strong>"After I [CURRENT HABIT], I will [NEW HABIT]"</strong>
+                        <br><br>
+                        Examples:<br>
+                        • After I pour my coffee, I will meditate for 1 minute<br>
+                        • After I sit down for dinner, I will say one thing I'm grateful for
+                    </div>
+                </div>
+
+                <div class="strategy-card">
+                    <h3 class="card-title">🍎 Temptation Bundling</h3>
+                    <div class="card-content">
+                        Pair an action you want to do with an action you need to do:
+                        <br><br>
+                        <strong>"After I [HABIT I NEED], I will [HABIT I WANT]"</strong>
+                        <br><br>
+                        Examples:<br>
+                        • After I do 10 push-ups, I can check social media<br>
+                        • After I write for 25 minutes, I can have a coffee
+                    </div>
+                </div>
+
+                <div class="strategy-card">
+                    <h3 class="card-title">🎯 Implementation Intentions</h3>
+                    <div class="card-content">
+                        Be specific about when and where you'll perform your habit:
+                        <br><br>
+                        <strong>"I will [BEHAVIOR] at [TIME] in [LOCATION]"</strong>
+                        <br><br>
+                        People who make specific plans are 2-3x more likely to follow through than those who don't plan.
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <div class="highlight-title">🏆 The Goldilocks Rule</div>
+                <p>Humans experience peak motivation when working on tasks that are right on the edge of their current abilities. The sweet spot is around 85% success rate—not too hard, not too easy, just right.</p>
+            </div>
+        </section>
+
+        <!-- Identity-Based Habits -->
+        <section class="section">
+            <div class="identity-section">
+                <div class="section-header">
+                    <h2 class="section-title">Identity-Based Habits</h2>
+                    <p class="section-description">Change who you are, not just what you do</p>
+                </div>
+
+                <div class="formula">
+                    <div class="formula-title">The Identity Loop</div>
+                    <div class="formula-equation">Action → Identity → Action</div>
+                    <p>Every action is a vote for the type of person you wish to become. As the votes build up, so does the evidence of your new identity.</p>
+                </div>
+
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 class="card-title">❌ Outcome-Based Approach</h3>
+                        <div class="card-content">
+                            <strong>Focus:</strong> What you want to achieve<br>
+                            <strong>Example:</strong> "I want to lose 20 pounds"<br>
+                            <strong>Problem:</strong> Once achieved, people often revert because their identity hasn't changed.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">✅ Identity-Based Approach</h3>
+                        <div class="card-content">
+                            <strong>Focus:</strong> Who you want to become<br>
+                            <strong>Example:</strong> "I am a healthy person"<br>
+                            <strong>Benefit:</strong> Habits become a reflection of identity, making them sustainable long-term.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h3>Identity Transformation Process</h3>
+                    <div class="points-grid">
+                        <div class="point-item">
+                            <div class="point-number">Step 1</div>
+                            Decide the type of person you want to be
+                        </div>
+                        <div class="point-item">
+                            <div class="point-number">Step 2</div>
+                            Prove it to yourself with small wins
+                        </div>
+                        <div class="point-item">
+                            <div class="point-number">Step 3</div>
+                            Let success change how you see yourself
+                        </div>
+                        <div class="point-item">
+                            <div class="point-number">Step 4</div>
+                            Repeat and reinforce with new evidence
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Environment Design -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Environment Design</h2>
+                <p class="section-description">Shape your space to make good habits inevitable</p>
+            </div>
+
+            <div class="tip-box">
+                <div class="highlight-title">💡 Key Insight: Context-Dependent Memory</div>
+                <p>Our behavior is heavily influenced by our environment. We often think we lack motivation when we really lack clarity. A small change in context can lead to a large change in behavior over time.</p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card-icon">✅</div>
+                    <h3 class="card-title">Make Good Habits Obvious</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>Place books on your pillow to read before bed</li>
+                            <li>Put workout clothes next to your bed</li>
+                            <li>Keep healthy snacks at eye level in the fridge</li>
+                            <li>Leave your guitar in the middle of the room</li>
+                            <li>Keep a water bottle on your desk</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚫</div>
+                    <h3 class="card-title">Make Bad Habits Invisible</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>Remove social media apps from your home screen</li>
+                            <li>Hide junk food in hard-to-reach places</li>
+                            <li>Unplug the TV and put remote in another room</li>
+                            <li>Keep your phone in another room while working</li>
+                            <li>Use website blockers during focused work time</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">🍽️</div>
+                    <h3 class="card-title">Kitchen Optimization</h3>
+                    <div class="card-content">
+                        Place healthy foods in prominent locations. Keep processed foods out of sight. Make water easily accessible with visible bottles.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💼</div>
+                    <h3 class="card-title">Workspace Setup</h3>
+                    <div class="card-content">
+                        Remove distractions from your desk. Keep important tools within arm's reach. Use visual cues for priority tasks.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛏️</div>
+                    <h3 class="card-title">Bedroom Design</h3>
+                    <div class="card-content">
+                        Charge devices outside the bedroom. Keep books on your nightstand. Set out clothes for morning routines.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Insights -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Essential Insights</h2>
+                <p class="section-description">The most important lessons from Atomic Habits</p>
+            </div>
+
+            <div class="key-points">
+                <h3>20 Life-Changing Takeaways</h3>
+                <div class="points-grid">
+                    <div class="point-item">
+                        <div class="point-number">1</div>
+                        Small habits make a big difference over time
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">2</div>
+                        Focus on systems, not goals
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">3</div>
+                        Identity change is the deepest level of change
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">4</div>
+                        Environment design trumps willpower
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">5</div>
+                        The 2-minute rule makes habits easy to start
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">6</div>
+                        Habit stacking builds on existing routines
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">7</div>
+                        Track your habits to stay motivated
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">8</div>
+                        Never miss twice in a row
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">9</div>
+                        Make it satisfying with immediate rewards
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">10</div>
+                        The plateau of latent potential explains delayed results
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">11</div>
+                        Motivation is overrated; environment often matters more
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">12</div>
+                        Start with showing up, then improve
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">13</div>
+                        Use implementation intentions for clarity
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">14</div>
+                        Temptation bundling makes habits more attractive
+                    </div>
+                    <div class="point-item">
+                        <div class="point-
