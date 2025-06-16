@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the power of tiny changes with Atomic Habits by James Clear. Learn how small behaviors can lead to remarkable personal transformation.">
-    <meta name="keywords" content="Atomic Habits, James Clear, habit formation, personal development, behavior change, productivity, identity habits">
-    <meta name="author" content="Anamitra">
-    <title>Atomic Habits | Master Tiny Changes for Big Results</title>
+    <meta name="description" content="Master Atomic Habits by James Clear - Learn how tiny changes can transform your life">
+    <meta name="keywords" content="Atomic Habits, James Clear, habit formation, personal development">
+    <meta name="author" content="Your Name">
+    <title>Atomic Habits | Tiny Changes, Remarkable Results</title>
     <style>
         :root {
             --primary-color: #1e3a8a;
@@ -20,38 +20,14 @@
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
-        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
 
         @keyframes slideUp {
-            from {
-                transform: translateY(30px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes scaleIn {
-            from {
-                transform: scale(0.95);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         * {
@@ -69,240 +45,122 @@
         }
 
         header {
-            background: linear-gradient(135deg, var(--dark-bg), #0f172a);
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 30px;
-            box-shadow: var(--shadow);
+            background: linear-gradient(135deg, var(--dark-bg), var(--primary-color));
+            color: white;
+            padding: 2rem;
+            text-align: center;
             animation: slideUp 0.6s ease-out;
         }
 
         .logo {
             display: flex;
             align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
         }
 
         .logo img {
-            width: 50px;
+            width: 60px;
             height: auto;
             margin-right: 15px;
             border-radius: 4px;
-            transition: var(--transition);
         }
 
-        .logo:hover img {
-            transform: rotate(-5deg) scale(1.1);
-        }
-
-        .logo h1 {
-            font-size: 1.8rem;
-            color: var(--text-light);
-            background: linear-gradient(to right, #ffffff, #e0e7ff);
+        h1 {
+            font-size: 2.2rem;
+            background: linear-gradient(to right, #fff, #e0e7ff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            animation: fadeIn 1s ease-out;
         }
 
-        header p {
-            font-size: 1rem;
-            color: #cbd5e1;
-            text-align: right;
-            opacity: 0;
-            animation: fadeIn 0.8s ease-out forwards;
-            animation-delay: 0.3s;
-        }
-
-        .cta-nav {
-            background-color: #0f172a;
+        nav {
+            background: rgba(0,0,0,0.1);
+            padding: 1rem;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
-            padding: 15px 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            animation: slideUp 0.6s ease-out forwards;
-            animation-delay: 0.4s;
+            gap: 1rem;
         }
 
-        .cta-nav a {
-            color: var(--text-light);
+        nav a {
+            color: white;
             text-decoration: none;
-            background-color: var(--secondary-color);
-            padding: 12px 24px;
+            background: var(--secondary-color);
+            padding: 0.6rem 1.2rem;
             border-radius: 30px;
             font-weight: bold;
             transition: var(--transition);
-            transform: translateY(0);
-            box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
         }
 
-        .cta-nav a:hover {
-            background-color: var(--primary-color);
+        nav a:hover {
+            background: var(--primary-color);
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.4);
-        }
-
-        .cta-nav a:active {
-            transform: translateY(0);
         }
 
         .container {
             max-width: 1100px;
-            margin: 30px auto;
-            padding: 0 20px;
-            animation: fadeIn 0.8s ease-out;
-            animation-delay: 0.6s;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
 
         section {
-            background-color: white;
-            padding: 30px;
+            background: white;
+            padding: 2rem;
             border-radius: 10px;
             box-shadow: var(--shadow);
-            margin-bottom: 40px;
-            opacity: 0;
-            animation: slideUp 0.8s ease-out forwards;
-            animation-delay: 0.8s;
-            transition: var(--transition);
-        }
-
-        section:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            transform: translateY(-3px);
-        }
-
-        h2 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 8px;
-            position: relative;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 70px;
-            height: 3px;
-            background: var(--accent-color);
-            border-radius: 3px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-        }
-
-        strong {
-            color: var(--primary-color);
+            margin-bottom: 2rem;
         }
 
         img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
-            border-radius: 10px;
-            margin-top: 20px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        img:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin-top: 1rem;
         }
 
         footer {
-            background: linear-gradient(135deg, var(--dark-bg), #0f172a);
-            color: var(--text-light);
+            background: var(--dark-bg);
+            color: white;
             text-align: center;
-            padding: 25px 10px;
-            font-size: 0.95rem;
-            opacity: 0;
-            animation: fadeIn 0.8s ease-out forwards;
-            animation-delay: 1s;
+            padding: 1.5rem;
+            margin-top: 2rem;
         }
 
-        footer p {
-            margin-bottom: 5px;
-        }
-
-        footer strong {
-            color: var(--accent-color);
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px 15px;
-            }
-
-            .logo {
-                margin-bottom: 15px;
-                justify-content: center;
-            }
-
-            header p {
-                text-align: center;
-            }
-
-            .cta-nav {
-                gap: 10px;
-                padding: 10px;
-            }
-
-            .cta-nav a {
-                padding: 8px 16px;
-                font-size: 0.9rem;
-            }
-
-            section {
-                padding: 20px;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
+            h1 { font-size: 1.8rem; }
+            nav { flex-direction: column; align-items: center; }
+            nav a { width: 80%; text-align: center; }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="https://m.media-amazon.com/images/I/91bYsX41DVL.jpg" alt="Atomic Habits Logo">
+            <img src="images/book-cover.jpg" alt="Atomic Habits Book Cover">
             <h1>Atomic Habits</h1>
         </div>
         <p>Transform your habits. Transform your life.</p>
     </header>
 
-    <nav class="cta-nav">
+    <nav>
         <a href="about.html">About the Book</a>
         <a href="author.html">About the Author</a>
         <a href="laws.html">The Four Laws</a>
-      <a href="key-takeaways.html">Key Takeaways</a>
-        <a href="conclusion.html" >conclusion</a>
+        <a href="key-takeaways.html">Key Takeaways</a>
+        <a href="conclusion.html">Conclusion</a>
     </nav>
 
     <div class="container">
         <section>
             <h2>Welcome to the Atomic Habits Guide</h2>
-            <p>This platform is your one-stop knowledge hub on James Clear's best-selling book <strong>Atomic Habits</strong>. Click on the sections above to explore insightful breakdowns of the book's core concepts.</p>
-            <p>Discover how tiny changes can lead to remarkable results through our comprehensive guides, visual explanations, and practical applications of Clear's revolutionary framework.</p>
-            <img src="https://m.media-amazon.com/images/I/91bYsX41DVL.jpg" alt="Atomic Habits Book Cover">
+            <p>Discover how tiny changes can lead to remarkable results through James Clear's revolutionary framework for habit formation.</p>
+            <img src="images/book-cover.jpg" alt="Atomic Habits visualization">
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 Atomic Habits Project. All rights reserved.</p>
-        <p>Site developed and maintained by <strong>Anamitra</strong>. Unauthorized duplication is prohibited.</p>
+        <p>&copy; 2025 Atomic Habits Guide. All rights reserved.</p>
     </footer>
 </body>
 </html>
