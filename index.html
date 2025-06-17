@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Master Atomic Habits by James Clear - Learn how tiny changes can transform your life">
     <meta name="keywords" content="Atomic Habits, James Clear, habit formation, personal development">
-    <meta name="author" content="Your Name">
+    <meta name="author" content="Anamitra Dutta">
     <title>Atomic Habits | Tiny Changes, Remarkable Results</title>
     <style>
         :root {
@@ -85,15 +85,11 @@
 
         .logo-img {
             width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
+            height: 65px;
+            border-radius: 8px;
             box-shadow: var(--shadow-light);
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
 
         .logo-text {
@@ -266,18 +262,19 @@
 
         .hero-image {
             width: 100%;
-            max-width: 400px;
-            height: 250px;
-            background: var(--gradient-primary);
+            max-width: 350px;
+            height: auto;
             border-radius: 15px;
             margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             box-shadow: var(--shadow-heavy);
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 600;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(31, 38, 135, 0.6);
         }
 
         /* Features Section */
@@ -423,8 +420,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <div class="logo-img">AH</div>
-                <span class="logo-text">Atomic Habits</span>
+                <img src="Home 1.jpg"logo-img" alt="Atomic Habits Logo">
             </div>
             <div class="header-center">
                 <h1 class="main-title">Atomic Habits</h1>
@@ -459,9 +455,7 @@
                     <a href="#" class="cta-primary">Start Your Journey</a>
                     <a href="#" class="cta-secondary">Watch Preview</a>
                 </div>
-                <div class="hero-image">
-                    Atomic Habits Visualization
-                </div>
+                <img src="Home 2.jpeg" class="hero-image" alt="Atomic Habits Book Cover">
             </div>
         </div>
     </section>
